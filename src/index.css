@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.pommy{
+    background-image: url(/mypics/pom.jpg);
+    height: 210px;
+    width: 310px;
+}
