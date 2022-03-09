@@ -168,13 +168,13 @@ module.exports = function (webpackEnv) {
     ].filter(Boolean);
     if (preProcessor) {
       loaders.push(
-        {
-          loader: require.resolve('resolve-url-loader'),
-          options: {
-            sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
-            root: paths.appSrc,
-          },
-        },
+       {
+         loader: require.resolve('resolve-url-loader'),
+         options: {
+           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+           // root: paths.appSrc, // setting this option would append a "." to relative-root paths IE: /mypics/pom.jpg becomes ./mypics/pom.jpg
+         },
+       },
         {
           loader: require.resolve(preProcessor),
           options: {

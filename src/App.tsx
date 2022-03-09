@@ -2,11 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import styles from './app.module.scss';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="pommy"></div>
+        <div className={`pommy ${styles.pommy}`}></div>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
